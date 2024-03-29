@@ -1,0 +1,41 @@
+/*
+ * Définition de la structure date
+ */
+typedef struct {
+    int jour;
+    int mois;
+    int annee;
+} date;
+
+int main() {
+
+    /*
+     * Variables pour l'entrée de la date
+     */
+    int jour, mois, annee;
+
+    /*
+     * Initialisation de la variable de type date
+     */
+    printf("Entrez le jour, le mois et l'année : ");
+    scanf("%d%d%d", &jour, &mois, &annee);
+
+    date maDate = {jour, mois, annee};
+
+    /*
+     * Affichage de la variable maDate
+     */
+    printf("Date : %02d/%02d/%04d\n", maDate.jour, maDate.mois, maDate.annee);
+
+    /*
+     * Définition d'un pointeur de type date
+     */
+    date* ptr_maDate = &maDate;
+
+    /*
+     * Affichage de la structure pointée par ptr_maDate
+     */
+    printf("Date (avec pointeur) : %02d/%02d/%04d\n", ptr_maDate->jour, ptr_maDate->mois, ptr_maDate->annee);
+
+    return 0;
+}
