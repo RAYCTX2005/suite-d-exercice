@@ -39,7 +39,7 @@ int main() {
 
     return 0;
 }
-''exercice 3
+*exercice 3
 /*
  * Définition de la structure date
  */
